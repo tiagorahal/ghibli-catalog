@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import {
+  Row,
+  Col,
+  Figure,
+  Button,
+} from 'react-bootstrap';
 import axios from 'axios';
 
 const MovieSelected = () => {
@@ -18,13 +23,30 @@ const MovieSelected = () => {
     fetchMovies();
   }, []);
 
+  // PASS INFO TO THE HIDDEN DIV USING PROPS
+
   return (
-    <Row>
+    <Row className="m-auto">
       { movieList.map((movie) => (
-        <Col sm={12} md={6} xl={4} key={movie.id} className="MovieSelected">
-          <div>
-            <button type="button">{movie.title}</button>
-            <p>{movie.description}</p>
+        <Col sm={12} md={6} xl={4} key={movie.id} className="mb-2">
+          <div className="MovieSelected">
+            <Figure>
+              <Figure.Image
+                fluid
+                alt="Movie Poster"
+                src={movie.image}
+              />
+              <Figure.Caption className="text-light">
+                Original title:
+                &nbsp;
+                {movie.original_title}
+              </Figure.Caption>
+            </Figure>
+            <h4>{movie.title}</h4>
+            <p className="moviedescription">{`${movie.description.slice(0, 106)}...`}</p>
+            <Button variant="outline-dark" size="md" className="justify-content-end" active>
+              Click to see more...
+            </Button>
           </div>
         </Col>
       )) }
