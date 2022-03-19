@@ -1,14 +1,15 @@
 import React from 'react';
-import MovieSelected from '../../components/MovieSelected/MovieSelected';
+import { Row } from 'react-bootstrap';
+import MovieSelected from '../MovieSelected/MovieSelected';
 
 const MoviesContainer = () => {
   const containerText = 'Ghibli Movies';
 
   return (
-    <div>
+    <Row>
       <h2>{containerText}</h2>
       <MovieSelected />
-    </div>
+    </Row>
   );
 };
 

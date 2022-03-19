@@ -1,0 +1,19 @@
+.MovieSelected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: rgba(96, 97, 99, 0.582);
+  padding-bottom: 1vh;
+  max-width: 400px;
+  max-height: 1000px;
+  margin: auto;
+  font-size: 0.9rem;
+}
+
+.moviedescription {
+  max-width: 280px;
+  padding-top: 1vh;
+  font-size: 0.9rem;
+}
