@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -12,7 +11,7 @@ const MovieSelected = () => {
         const info = await response.data;
         setMovieList(info);
       } catch (error) {
-        console.error(error);
+        throw new Error(error);
       }
     };
     fetchMovies();
