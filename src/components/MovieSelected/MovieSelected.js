@@ -18,8 +18,6 @@ const MovieSelected = () => {
     fetchMovies();
   }, []);
 
-  console.log(movieList);
-
   return (
     <div>
       { movieList.map((movie) => <button type="button" key={movie.id}>{movie.title}</button>) }

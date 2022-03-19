@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import MovieSelected from './components/MovieSelected/MovieSelected';
+import MoviesContainer from './containers/MoviesContainer/MoviesContiner';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <MovieSelected />
+        <MoviesContainer />
       </header>
     </div>
   );
