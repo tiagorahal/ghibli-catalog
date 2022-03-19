@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
 const MovieSelected = () => {
@@ -18,9 +19,13 @@ const MovieSelected = () => {
   }, []);
 
   return (
-    <div>
-      { movieList.map((movie) => <button type="button" key={movie.id}>{movie.title}</button>) }
-    </div>
+    <Row>
+      { movieList.map((movie) => (
+        <Col key={movie.id}>
+          <button type="button">{movie.title}</button>
+        </Col>
+      )) }
+    </Row>
   );
 };
 

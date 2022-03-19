@@ -1,14 +1,13 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import './App.css';
-import MoviesContainer from './containers/MoviesContainer/MoviesContiner';
+import MoviesContainer from './containers/MoviesContainer/MoviesContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <MoviesContainer />
-      </header>
-    </div>
+    <Container className="fluid App">
+      <MoviesContainer />
+    </Container>
   );
 }
 
