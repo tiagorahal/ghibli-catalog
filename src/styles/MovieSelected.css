@@ -1,0 +1,11 @@
+.MovieSelected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px red solid;
+  padding-bottom: 10vh;
+  max-width: 300px;
+  margin: auto;
+  font-size: 0.7rem;
+}

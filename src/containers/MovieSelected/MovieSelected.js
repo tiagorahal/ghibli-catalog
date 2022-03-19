@@ -21,8 +21,11 @@ const MovieSelected = () => {
   return (
     <Row>
       { movieList.map((movie) => (
-        <Col key={movie.id}>
-          <button type="button">{movie.title}</button>
+        <Col sm={12} md={6} xl={4} key={movie.id} className="MovieSelected">
+          <div>
+            <button type="button">{movie.title}</button>
+            <p>{movie.description}</p>
+          </div>
         </Col>
       )) }
     </Row>
