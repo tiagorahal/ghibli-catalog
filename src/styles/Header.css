@@ -12,9 +12,13 @@
   padding: 0 5vh;
 }
 
-.Header a {
+.tablet-header-link {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
   font-weight: bolder;
+}
+
+.mobile-header-link {
+  
 }
