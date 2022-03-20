@@ -14,10 +14,10 @@ const Header = () => {
   return (
     <Row>
       <Col sx={12} className="Header">
-        <a href={headerLink} target="_blank" className="tablet-header-link" rel="noreferrer">
+        <a href={headerLink} target="_blank" rel="noreferrer" className="tablet-header-link">
           {headerText}
         </a>
-        <a href="/" className="mobile-header-link">
+        <a href={headerLink} target="_blank" rel="noreferrer" className="mobile-header-link">
           <FaBars />
         </a>
         <Figure>
