@@ -1,3 +1,4 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 .Header {
   max-height: 17vh;
   background-color: rgb(48, 56, 70);
@@ -6,12 +7,12 @@
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
-  border-radius: 5px;
 }
 
 .tablet-header-link,
 .tablet-header-link:hover,
 .tablet-header-link:visited {
+  font-family: ghibliBold;
   text-decoration: none;
   color: white;
   font-size: 1.5rem;

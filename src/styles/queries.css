@@ -18,6 +18,14 @@
 }
 
 @media (min-width: 992px) {
+  .desktop-footer-link {
+    font-size: 1.5rem;
+    padding-right: 10vh;
+  }
+
+  .Footer img {
+    margin-left: 10vh;
+  }
 
 }
 

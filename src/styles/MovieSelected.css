@@ -1,3 +1,4 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 .MovieSelected {
   display: flex;
   justify-content: center;
@@ -11,10 +12,12 @@
   max-height: 1000px;
   margin: auto;
   font-size: 0.9rem;
+  font-family: ghibliRegular;
 }
 
 h2 {
-  padding: 2vh 0;
+  padding: 5vh 0;
+  font-family: ghibliBold;
 }
 
 figure img {
