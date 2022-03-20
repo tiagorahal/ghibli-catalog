@@ -18,6 +18,9 @@
 }
 
 @media (min-width: 992px) {
+  .desktop-footer-link {
+    padding-right: 10vh;
+  }
 
 }
 

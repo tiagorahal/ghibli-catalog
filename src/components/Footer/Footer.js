@@ -4,21 +4,19 @@ import {
   Col,
   Figure,
 } from 'react-bootstrap';
-import { FaBars } from 'react-icons/fa';
-import HeaderLogo from '../../assets/images/header-logo.png';
+import FooterLogo from '../../assets/images/footer-logo.png';
 
 const Footer = () => {
-  const headerText = 'Click to know more about Ghibli Studio.';
-  const headerLink = 'https://ghibli.fandom.com/wiki/Ghibli_Wiki';
+  const footerText = 'Tiago Rahal';
+  const footerLink = 'https://github.com/tiagorahal';
 
   return (
     <Row>
-      <Col sx={12} className="Header">
-        <a href={headerLink} target="_blank" rel="noreferrer" className="tablet-header-link">
-          {headerText}
-        </a>
-        <a href={headerLink} target="_blank" rel="noreferrer" className="mobile-header-link">
-          <FaBars />
+      <Col sx={12} className="Footer">
+        <a href={footerLink} target="_blank" rel="noreferrer" className="desktop-footer-link">
+          &#169;
+          &#160;
+          {footerText}
         </a>
         <Figure>
           <Figure.Image
@@ -26,7 +24,7 @@ const Footer = () => {
             width={171}
             height={180}
             alt="171x180"
-            src={HeaderLogo}
+            src={FooterLogo}
           />
         </Figure>
       </Col>
