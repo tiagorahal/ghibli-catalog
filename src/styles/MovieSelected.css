@@ -4,12 +4,21 @@
   align-items: center;
   flex-direction: column;
   border-radius: 5px;
-  background-color: rgba(96, 97, 99, 0.582);
-  padding-bottom: 1vh;
+  background-color: rgb(48, 56, 70);
+  color: white;
+  padding-bottom: 2vh;
   max-width: 400px;
   max-height: 1000px;
   margin: auto;
   font-size: 0.9rem;
+}
+
+h2 {
+  padding: 2vh 0;
+}
+
+figure img {
+  border-radius: 5px;
 }
 
 .moviedescription {

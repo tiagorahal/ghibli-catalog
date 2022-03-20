@@ -3,7 +3,7 @@ import { Row } from 'react-bootstrap';
 import MovieSelected from '../MovieSelected/MovieSelected';
 
 const MoviesContainer = () => {
-  const containerText = 'Ghibli Movies';
+  const containerText = 'Studio Ghibli’s films are undeniably works of art.';
 
   return (
     <Row>
