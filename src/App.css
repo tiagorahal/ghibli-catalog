@@ -1,3 +1,9 @@
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: ghibliRegular;
+  src: url('./assets/fonts/Ghibli.otf');
+}
+
+@font-face {
+  font-family: ghibliBold;
+  src: url('./assets/fonts/Ghibli-Bold.otf');
 }
