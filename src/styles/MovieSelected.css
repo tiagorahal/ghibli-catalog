@@ -13,7 +13,11 @@
   font-size: 0.9rem;
 }
 
-Figure img {
+h2 {
+  padding: 2vh 0;
+}
+
+figure img {
   border-radius: 5px;
 }
 

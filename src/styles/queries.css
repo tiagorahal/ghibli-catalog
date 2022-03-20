@@ -1,3 +1,4 @@
+/* stylelint-disable */
 
 /* MIN WIDTH */
 
@@ -10,13 +11,13 @@
 }
 
 @media (min-width: 992px) {
-  
+
 }
 
 @media (min-width: 1200px) {
   .App {
     text-align: center;
-    background: rgb(27,160,208) url('../assets/images/background.png') no-repeat right bottom;
+    background: rgb(27, 160, 208) url('../assets/images/background.png') no-repeat right bottom;
   }
 }
 
@@ -35,13 +36,13 @@
 }
 
 @media (max-width: 991.98px) {
-  
+
 }
 
 @media (max-width: 1199.98px) {
   .App {
     text-align: center;
-    background-color: rgb(27,160,208);
+    background-color: rgb(27, 160, 208);
     background-image: none;
   }
 }
