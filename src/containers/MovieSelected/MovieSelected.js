@@ -14,8 +14,7 @@ const MovieSelected = () => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get('https://ghibliapi.herokuapp.com/films/');
-        const info = await response.data;
-        setMovieList(info);
+        setMovieList(await response.data);
       } catch (error) {
         throw new Error(error);
       }
@@ -28,7 +27,7 @@ const MovieSelected = () => {
   return (
     <Row className="m-auto">
       { movieList.map((movie) => (
-        <Col sm={12} md={6} xl={4} key={movie.id} className="mb-2">
+        <Col sm={12} md={6} xl={4} key={movie.id} className="mb-5">
           <div className="MovieSelected">
             <Figure>
               <Figure.Image
@@ -44,7 +43,7 @@ const MovieSelected = () => {
             </Figure>
             <h4>{movie.title}</h4>
             <p className="moviedescription">{`${movie.description.slice(0, 106)}...`}</p>
-            <Button variant="outline-dark" size="md" className="justify-content-end" active>
+            <Button variant="outline-light" size="md" className="justify-content-end" active>
               Click to see more...
             </Button>
           </div>
