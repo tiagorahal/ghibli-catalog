@@ -1,9 +1,9 @@
 @font-face {
-  font-family: ghibliRegular;
+  font-family: 'ghibliRegular';
   src: url('./assets/fonts/Ghibli.otf');
 }
 
 @font-face {
-  font-family: ghibliBold;
+  font-family: 'ghibliBold';
   src: url('./assets/fonts/Ghibli-Bold.otf');
 }
