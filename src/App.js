@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import './App.css';
+import './styles/queries.css';
 import './styles/MovieSelected.css';
 import MoviesContainer from './containers/MoviesContainer/MoviesContainer';
 

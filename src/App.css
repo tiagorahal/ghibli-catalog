@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: rgb(27,160,208) url('./assets/images/background.png') no-repeat right bottom;
+  background: rgb(27,160,208);
 }
 
 .App-link {
