@@ -6,7 +6,6 @@
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
-  border-radius: 5px;
 }
 
 .desktop-footer-link,
@@ -14,6 +13,5 @@
 .desktop-footer-link:visited {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
   font-weight: bolder;
 }
