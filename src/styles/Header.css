@@ -1,0 +1,28 @@
+.Header {
+  max-height: 17vh;
+  background-color: rgb(48, 56, 70);
+  padding-top: 1vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.tablet-header-link,
+.tablet-header-link:hover,
+.tablet-header-link:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.mobile-header-link,
+.mobile-header-link:hover,
+.mobile-header-link:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
