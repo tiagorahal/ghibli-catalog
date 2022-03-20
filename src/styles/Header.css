@@ -1,0 +1,20 @@
+.Header {
+  max-height: 17vh;
+  background-color: beige;
+  padding-top: 1vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header > * {
+  padding: 0 5vh;
+}
+
+.Header a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
