@@ -8,12 +8,13 @@ import { FaBars } from 'react-icons/fa';
 import HeaderLogo from '../../assets/images/header-logo.png';
 
 const Header = () => {
-  const headerText = 'lorem ipsum';
+  const headerText = 'Click to know more about Ghibli Studio.';
+  const headerLink = 'https://ghibli.fandom.com/wiki/Ghibli_Wiki';
 
   return (
     <Row>
       <Col sx={12} className="Header">
-        <a href="/" className="tablet-header-link">
+        <a href={headerLink} target="_blank" className="tablet-header-link" rel="noreferrer">
           {headerText}
         </a>
         <a href="/" className="mobile-header-link">

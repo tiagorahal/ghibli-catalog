@@ -10,6 +10,11 @@
   .mobile-header-link {
     display: none;
   }
+
+  .Header > * {
+    padding: 0 5vh;
+  }
+
 }
 
 @media (min-width: 992px) {
