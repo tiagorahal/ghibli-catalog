@@ -1,32 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Row,
   Col,
   Figure,
   Button,
 } from 'react-bootstrap';
-import axios from 'axios';
+import useApi from '../../services/useApi';
 
 const MovieSelected = () => {
-  const [movieList, setMovieList] = useState([]);
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await axios.get('https://ghibliapi.herokuapp.com/films/');
-        setMovieList(await response.data);
-      } catch (error) {
-        throw new Error(error);
-      }
-    };
-    fetchMovies();
-  }, []);
-
-  // PASS INFO TO THE HIDDEN DIV USING PROPS
+  const [data] = useApi('https://ghibliapi.herokuapp.com/films/');
 
   return (
     <Row className="m-auto mt-5">
-      { movieList.map((movie) => (
+      {data && data.map((movie) => (
         <Col sm={12} md={6} xl={4} key={movie.id} className="mb-5">
           <div className="MovieSelected">
             <Figure>
