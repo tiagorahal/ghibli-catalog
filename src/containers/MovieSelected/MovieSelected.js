@@ -8,7 +8,8 @@ import {
 import useApi from '../../services/useApi';
 
 const MovieSelected = () => {
-  const [movieList] = useApi('https://ghibliapi.herokuapp.com/films/');
+  const urlGhibli = 'https://ghibliapi.herokuapp.com/films/';
+  const [movieList] = useApi(urlGhibli);
 
   return (
     <Row className="m-auto mt-5">
