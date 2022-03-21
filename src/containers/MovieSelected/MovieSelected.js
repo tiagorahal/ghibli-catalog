@@ -8,11 +8,11 @@ import {
 import useApi from '../../services/useApi';
 
 const MovieSelected = () => {
-  const [data] = useApi('https://ghibliapi.herokuapp.com/films/');
+  const [movieList] = useApi('https://ghibliapi.herokuapp.com/films/');
 
   return (
     <Row className="m-auto mt-5">
-      {data && data.map((movie) => (
+      {movieList && movieList.map((movie) => (
         <Col sm={12} md={6} xl={4} key={movie.id} className="mb-5">
           <div className="MovieSelected">
             <Figure>
