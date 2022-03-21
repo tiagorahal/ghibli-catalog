@@ -38,6 +38,7 @@ const MovieSelected = () => {
               </Button>
             </div>
             <MovieInfo
+              displayStatus="d-none"
               title={movie.title}
               originalTitle={movie.original_title}
               originalTitleRomanised={movie.original_title_romanised}

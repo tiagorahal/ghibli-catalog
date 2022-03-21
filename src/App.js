@@ -4,6 +4,7 @@ import { Container } from 'react-bootstrap';
 import './styles/queries.css';
 import './App.css';
 import './styles/MovieSelected.css';
+import './styles/MovieInfo.css';
 import './styles/Header.css';
 import './styles/Footer.css';
 
