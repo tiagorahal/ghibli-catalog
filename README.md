@@ -2,6 +2,9 @@
 
 > Ghibli
 
+![screenshot-01](./src/assets/images/screenshot01.png)
+![screenshot-02](./src/assets/images/screenshot02.png)
+
 A online catalog of Studio Ghibli movies using API to fetch all information.
 
 ## Built With

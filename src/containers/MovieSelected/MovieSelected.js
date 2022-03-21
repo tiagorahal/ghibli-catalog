@@ -25,7 +25,7 @@ const MovieSelected = () => {
   // PASS INFO TO THE HIDDEN DIV USING PROPS
 
   return (
-    <Row className="mt-5">
+    <Row className="m-auto mt-5">
       { movieList.map((movie) => (
         <Col sm={12} md={6} xl={4} key={movie.id} className="mb-5">
           <div className="MovieSelected">
