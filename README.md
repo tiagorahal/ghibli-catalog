@@ -16,7 +16,7 @@ A online catalog of Studio Ghibli movies using API to fetch all information.
 
 ## Live Demo
 
-[Live Demo Link](--------------)
+[Live Demo Link](https://ghibli-catalog-8c5tpzksi-tiagorahal.vercel.app/)
 
 
 ## Getting Started
