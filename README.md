@@ -10,9 +10,9 @@ A online catalog of Studio Ghibli movies using API to fetch all information.
 ## Built With
 
 - CSS
+- Bootstrap
 - JavaScript
 - React
-- Redux
 
 ## Live Demo
 
