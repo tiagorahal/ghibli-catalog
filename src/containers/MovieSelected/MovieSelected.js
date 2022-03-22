@@ -1,5 +1,3 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import {
   Row,
@@ -16,6 +14,7 @@ const MovieSelected = () => {
   const [movieSelectedInfo, setInfo] = useState({
     displayStatus: 'd-none',
     title: '',
+    image: '',
     originalTitle: '',
     originalTitleRomanised: '',
     description: '',
@@ -30,6 +29,7 @@ const MovieSelected = () => {
     setInfo({
       displayStatus: 'd-block',
       title: movie.title,
+      image: movie.image,
       originalTitle: movie.original_title,
       originalTitleRomanised: movie.original_title_romanised,
       description: movie.description,
@@ -39,7 +39,7 @@ const MovieSelected = () => {
       runningTime: movie.running_time,
       rtScore: movie.rt_score,
     });
-    console.log(movieSelectedInfo);
+    return movieSelectedInfo;
   };
 
   // PASSAR POR PROPS E ONCLICK NO ELEMENTO FORA DO MAP!!!!!!!!!!!!!!!!!!!!111
@@ -76,6 +76,7 @@ const MovieSelected = () => {
             </div>
             <MovieInfo
               displayStatus={movieSelectedInfo.displayStatus}
+              image={movieSelectedInfo.image}
               title={movieSelectedInfo.title}
               originalTitle={movieSelectedInfo.originalTitle}
               originalTitleRomanised={movieSelectedInfo.originalTitleRomanised}

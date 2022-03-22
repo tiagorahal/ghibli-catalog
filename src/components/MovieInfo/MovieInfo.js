@@ -11,6 +11,7 @@ const MovieInfo = (props) => {
         <h1>
           {props.title}
         </h1>
+        <img src={props.image} alt={props.title} />
         <p>
           {props.originalTitle}
         </p>
@@ -43,6 +44,7 @@ const MovieInfo = (props) => {
 MovieInfo.propTypes = ({
   displayStatus: PropTypes.string,
   title: PropTypes.string,
+  image: PropTypes.string,
   original_title: PropTypes.string,
   original_title_romanised: PropTypes.string,
   description: PropTypes.string,
