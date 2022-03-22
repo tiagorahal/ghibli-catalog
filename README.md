@@ -4,6 +4,7 @@
 
 ![screenshot-01](./src/assets/images/screenshot01.png)
 ![screenshot-02](./src/assets/images/screenshot02.png)
+![screenshot-03](./src/assets/images/screenshot03.png)
 
 A online catalog of Studio Ghibli movies using API to fetch all information.
 
@@ -16,7 +17,7 @@ A online catalog of Studio Ghibli movies using API to fetch all information.
 
 ## Live Demo
 
-[Live Demo Link](https://ghibli-catalog-8c5tpzksi-tiagorahal.vercel.app/)
+[Live Demo Link](https://ghibli-catalog-pad7sqwba-tiagorahal.vercel.app/)
 
 
 ## Getting Started
