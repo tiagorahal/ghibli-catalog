@@ -1,42 +1,49 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 const MovieInfo = (props) => {
-  const classProps = `MovieInfo ${props.displayStatus}`;
+  const display = `MovieInfo ${props.displayStatus}`;
+
+  // temporarily solution
+  const handleClick = () => {
+    window.location.reload(false);
+  };
 
   return (
-    <div className={classProps}>
-      <div className="movie-info-inner">
-        <h1>
-          {props.title}
-        </h1>
-        <img src={props.image} alt={props.title} />
-        <p>
-          {props.originalTitle}
-        </p>
-        <p>
-          {props.originalTitleRomanised}
-        </p>
-        <p>
-          {props.description}
-        </p>
-        <p>
-          {props.director}
-        </p>
-        <p>
-          {props.producer}
-        </p>
-        <p>
-          {props.releaseDate}
-        </p>
-        <p>
-          {props.runningTime}
-        </p>
-        <p>
-          {props.rtScore}
-        </p>
-      </div>
+    <div className={display}>
+      <Button onClick={handleClick} variant="primary" size="lg">
+        Large button
+      </Button>
+      <h1>
+        {props.title}
+      </h1>
+      <img src={props.image} alt={props.title} />
+      <p>
+        {props.originalTitle}
+      </p>
+      <p>
+        {props.originalTitleRomanised}
+      </p>
+      <p>
+        {props.description}
+      </p>
+      <p>
+        {props.director}
+      </p>
+      <p>
+        {props.producer}
+      </p>
+      <p>
+        {props.releaseDate}
+      </p>
+      <p>
+        {props.runningTime}
+      </p>
+      <p>
+        {props.rtScore}
+      </p>
     </div>
   );
 };
