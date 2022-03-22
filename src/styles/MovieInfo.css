@@ -12,11 +12,31 @@
   max-width: 90%;
   max-height: 95%;
   margin: auto;
-  overflow: auto;
+  font-family: ghibliRegular;
 }
 
 .info-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.info-img {
+  margin-top: 3vh;
+}
+
+.image-text {
+  margin-bottom: 1.5vh;
+}
+
+.info-text {
+  text-align: start;
+}
+
+.section-title {
+  font-family: ghibliBold;
+}
+
+.info-button {
+  margin-top: 100px;
 }

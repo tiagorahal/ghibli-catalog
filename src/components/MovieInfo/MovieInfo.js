@@ -31,31 +31,76 @@ const MovieInfo = (props) => {
   return (
     <Col className={display}>
       <div className="info-content">
-        <div className="image-div col-sm-12 col-md-6">
+        <div className="image-div col-sm-12 col-md-7 col-lg-6 col-xxl-4">
           <Figure className="info-img">
             <Figure.Image
-              className="img-fluid"
+              className="img-fluid m-0"
               alt={title}
               src={image}
             />
           </Figure>
         </div>
-        <div className="image-text col-sm-12 col-md-6">
-          <div>
-            <h1>
+        <div className="image-text col-sm-12 col-md-4 gx-md-2">
+          <div className="info-text">
+            <h1 className="text-white">
               {title}
             </h1>
-            <p>
+            <p className="text-white">
+              <strong className="section-title">
+                Original Title:
+              </strong>
+              &#160;
               {originalTitle}
+              <br />
+              &#40;
               {originalTitleRomanised}
+              &#41;
+              <br />
+              <br />
+              <strong className="section-title">
+                Description:
+              </strong>
+              &#160;
               {description}
+              <br />
+              <br />
+              <strong className="section-title">
+                Director:
+              </strong>
+              &#160;
               {director}
+              <br />
+              <br />
+              <strong className="section-title">
+                Producer:
+              </strong>
+              &#160;
               {producer}
+              <br />
+              <br />
+              <strong className="section-title">
+                Release Date:
+              </strong>
+              &#160;
               {releaseDate}
+              <br />
+              <br />
+              <strong className="section-title">
+                Running Time:
+              </strong>
+              &#160;
               {runningTime}
+              min.
+              <br />
+              <br />
+              <strong className="section-title">
+                Score:
+              </strong>
+              &#160;
               {rtScore}
+              %
             </p>
-            <Button onClick={handleClick} variant="primary" size="lg">
+            <Button className="mt-1" onClick={handleClick} variant="primary" size="lg" active>
               Go Back
             </Button>
           </div>
