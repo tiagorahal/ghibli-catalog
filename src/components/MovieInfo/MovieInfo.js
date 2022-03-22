@@ -7,33 +7,35 @@ const MovieInfo = (props) => {
 
   return (
     <div className={classProps}>
-      <h1>
-        {props.title}
-      </h1>
-      <p>
-        {props.originalTitle}
-      </p>
-      <p>
-        {props.originalTitleRomanised}
-      </p>
-      <p>
-        {props.description}
-      </p>
-      <p>
-        {props.director}
-      </p>
-      <p>
-        {props.producer}
-      </p>
-      <p>
-        {props.releaseDate}
-      </p>
-      <p>
-        {props.runningTime}
-      </p>
-      <p>
-        {props.rtScore}
-      </p>
+      <div className="movie-info-inner">
+        <h1>
+          {props.title}
+        </h1>
+        <p>
+          {props.originalTitle}
+        </p>
+        <p>
+          {props.originalTitleRomanised}
+        </p>
+        <p>
+          {props.description}
+        </p>
+        <p>
+          {props.director}
+        </p>
+        <p>
+          {props.producer}
+        </p>
+        <p>
+          {props.releaseDate}
+        </p>
+        <p>
+          {props.runningTime}
+        </p>
+        <p>
+          {props.rtScore}
+        </p>
+      </div>
     </div>
   );
 };

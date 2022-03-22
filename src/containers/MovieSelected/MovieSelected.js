@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import {
   Row,
   Col,
@@ -10,8 +12,37 @@ import MovieInfo from '../../components/MovieInfo/MovieInfo';
 import useApi from '../../services/useApi';
 
 const MovieSelected = () => {
-  const urlGhibli = 'https://ghibliapi.herokuapp.com/films/';
-  const [movieList] = useApi(urlGhibli);
+  const [movieList] = useApi('https://ghibliapi.herokuapp.com/films/');
+  const [movieSelectedInfo, setInfo] = useState({
+    displayStatus: 'd-none',
+    title: '',
+    originalTitle: '',
+    originalTitleRomanised: '',
+    description: '',
+    director: '',
+    producer: '',
+    releaseDate: '',
+    runningTime: '',
+    rtScore: '',
+  });
+
+  const handleClick = (movie) => {
+    setInfo({
+      displayStatus: 'd-block',
+      title: movie.title,
+      originalTitle: movie.original_title,
+      originalTitleRomanised: movie.original_title_romanised,
+      description: movie.description,
+      director: movie.director,
+      producer: movie.producer,
+      releaseDate: movie.release_date,
+      runningTime: movie.running_time,
+      rtScore: movie.rt_score,
+    });
+    console.log(movieSelectedInfo);
+  };
+
+  // PASSAR POR PROPS E ONCLICK NO ELEMENTO FORA DO MAP!!!!!!!!!!!!!!!!!!!!111
 
   return (
     <Row className="m-auto mt-5">
@@ -33,21 +64,19 @@ const MovieSelected = () => {
               </Figure>
               <h4>{movie.title}</h4>
               <p className="moviedescription">{`${movie.description.slice(0, 106)}...`}</p>
-              <Button variant="outline-light" size="md" className="justify-content-end" active>
+              <Button
+                variant="outline-light"
+                size="md"
+                className="justify-content-end"
+                active
+                onClick={() => handleClick(movie)}
+              >
                 Click to see more...
               </Button>
             </div>
             <MovieInfo
               displayStatus="d-none"
-              title={movie.title}
-              originalTitle={movie.original_title}
-              originalTitleRomanised={movie.original_title_romanised}
-              description={movie.description}
-              director={movie.director}
-              producer={movie.producer}
-              releaseDate={movie.release_date}
-              runningTime={movie.running_time}
-              rtScore={movie.rt_score}
+              title=""
             />
           </Col>
         )) }
