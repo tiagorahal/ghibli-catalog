@@ -3,15 +3,17 @@ import {
   Row,
   Col,
   Figure,
-  Button,
 } from 'react-bootstrap';
+import ReactiveButton from 'reactive-button';
 
 import MovieInfo from '../../components/MovieInfo/MovieInfo';
 import useApi from '../../services/useApi';
 
 const MovieSelected = () => {
   const [movieList] = useApi('https://ghibliapi.herokuapp.com/films/');
+  const [state, setState] = useState('idle');
   const [movieSelectedInfo, setInfo] = useState({
+    butttonDisable: false,
     displayStatus: 'd-none',
     title: '',
     image: '',
@@ -26,22 +28,28 @@ const MovieSelected = () => {
   });
 
   const handleClick = (movie) => {
-    setInfo({
-      displayStatus: 'd-block',
-      title: movie.title,
-      image: movie.image,
-      originalTitle: movie.original_title,
-      originalTitleRomanised: movie.original_title_romanised,
-      description: movie.description,
-      director: movie.director,
-      producer: movie.producer,
-      releaseDate: movie.release_date,
-      runningTime: movie.running_time,
-      rtScore: movie.rt_score,
-    });
+    setState('loading');
+    setTimeout(() => {
+      setState('success');
+      setInfo({
+        butttonDisable: true,
+        displayStatus: 'd-block',
+        title: movie.title,
+        image: movie.image,
+        originalTitle: movie.original_title,
+        originalTitleRomanised: movie.original_title_romanised,
+        description: movie.description,
+        director: movie.director,
+        producer: movie.producer,
+        releaseDate: movie.release_date,
+        runningTime: movie.running_time,
+        rtScore: movie.rt_score,
+      });
+    }, 1500);
     return movieSelectedInfo;
   };
 
+  // amarrar de algum jeito o handleclick com a key
   return (
     <Row className="m-auto mt-5">
       {movieList // first movieList is to check if is true before loading
@@ -62,15 +70,20 @@ const MovieSelected = () => {
               </Figure>
               <h4>{movie.title}</h4>
               <p className="moviedescription">{`${movie.description.slice(0, 106)}...`}</p>
-              <Button
+              <ReactiveButton
+                buttonState={state}
+                loadingText="Loading"
+                successText="Ready"
+                messageDuration={1500}
+                animation={false}
+                idleText="Click to know more..."
+                disabled={movieSelectedInfo.butttonDisable}
                 variant="outline-light"
                 size="md"
                 className="justify-content-end"
                 active
                 onClick={() => handleClick(movie)}
-              >
-                Click to see more...
-              </Button>
+              />
             </div>
             <MovieInfo
               displayStatus={movieSelectedInfo.displayStatus}
