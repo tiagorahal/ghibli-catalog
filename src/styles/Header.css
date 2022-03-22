@@ -1,6 +1,6 @@
 /* stylelint-disable font-family-no-missing-generic-family-keyword */
 .Header {
-  max-height: 17vh;
+  height: 130px;
   background-color: rgb(48, 56, 70);
   padding-top: 1vh;
   display: flex;
