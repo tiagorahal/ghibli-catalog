@@ -1,10 +1,23 @@
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 const MovieInfo = (props) => {
-  const display = `MovieInfo ${props.displayStatus}`;
+  const {
+    displayStatus,
+    title,
+    image,
+    originalTitle,
+    originalTitleRomanised,
+    description,
+    director,
+    producer,
+    releaseDate,
+    runningTime,
+    rtScore,
+  } = props;
+
+  const display = `MovieInfo ${displayStatus}`;
 
   // temporarily solution
   const handleClick = () => {
@@ -14,35 +27,35 @@ const MovieInfo = (props) => {
   return (
     <div className={display}>
       <Button onClick={handleClick} variant="primary" size="lg">
-        Large button
+        Go Back
       </Button>
       <h1>
-        {props.title}
+        {title}
       </h1>
-      <img src={props.image} alt={props.title} />
+      <img src={image} alt={title} />
       <p>
-        {props.originalTitle}
+        {originalTitle}
       </p>
       <p>
-        {props.originalTitleRomanised}
+        {originalTitleRomanised}
       </p>
       <p>
-        {props.description}
+        {description}
       </p>
       <p>
-        {props.director}
+        {director}
       </p>
       <p>
-        {props.producer}
+        {producer}
       </p>
       <p>
-        {props.releaseDate}
+        {releaseDate}
       </p>
       <p>
-        {props.runningTime}
+        {runningTime}
       </p>
       <p>
-        {props.rtScore}
+        {rtScore}
       </p>
     </div>
   );
