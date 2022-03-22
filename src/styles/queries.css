@@ -38,12 +38,12 @@
   }
 
   .info-text {
-    font-size: 0.5rem;
-  }
-  .section-title {
     font-size: 0.6rem;
   }
 
+  .section-title {
+    font-size: 0.7rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -69,10 +69,6 @@
   .App {
     text-align: center;
     background: rgb(27, 160, 208) url('../assets/images/background.png') no-repeat right bottom;
-  }
-
-  .image-div {
-    padding: 0 0;
   }
 
   .info-img {

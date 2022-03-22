@@ -24,10 +24,17 @@
 
 .info-img {
   margin-top: 3vh;
+  height: 90%;
+  max-width: 100%;
+}
+
+.info-img img {
+  max-width: 95%;
 }
 
 .image-text {
-  margin-bottom: 1.5vh;
+  max-height: 90%;
+  margin: 3vh 0;
 }
 
 .info-text {
