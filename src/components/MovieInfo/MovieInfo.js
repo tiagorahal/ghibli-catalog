@@ -1,5 +1,9 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import {
+  Button,
+  Figure,
+  Col,
+} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 const MovieInfo = (props) => {
@@ -25,39 +29,53 @@ const MovieInfo = (props) => {
   };
 
   return (
-    <div className={display}>
-      <Button onClick={handleClick} variant="primary" size="lg">
-        Go Back
-      </Button>
-      <h1>
-        {title}
-      </h1>
-      <img className="img-fluid" src={image} alt={title} />
-      <p>
-        {originalTitle}
-      </p>
-      <p>
-        {originalTitleRomanised}
-      </p>
-      <p>
-        {description}
-      </p>
-      <p>
-        {director}
-      </p>
-      <p>
-        {producer}
-      </p>
-      <p>
-        {releaseDate}
-      </p>
-      <p>
-        {runningTime}
-      </p>
-      <p>
-        {rtScore}
-      </p>
-    </div>
+    <Col className={display}>
+      <div className="info-content">
+        <div className="image-div col-sm-12 col-md-6">
+          <Figure className="info-img">
+            <Figure.Image
+              className="img-fluid"
+              alt={title}
+              src={image}
+            />
+          </Figure>
+        </div>
+        <div className="image-text col-sm-12 col-md-6">
+          <div>
+            <h1>
+              {title}
+            </h1>
+            <p>
+              {originalTitle}
+            </p>
+            <p>
+              {originalTitleRomanised}
+            </p>
+            <p>
+              {description}
+            </p>
+            <p>
+              {director}
+            </p>
+            <p>
+              {producer}
+            </p>
+            <p>
+              {releaseDate}
+            </p>
+            <p>
+              {runningTime}
+            </p>
+            <p>
+              {rtScore}
+            </p>
+            <Button onClick={handleClick} variant="primary" size="lg">
+              Go Back
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Col>
   );
 };
 

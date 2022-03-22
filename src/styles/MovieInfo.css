@@ -1,11 +1,23 @@
 .MovieInfo {
-  background-color: blueviolet;
-  position: fixed; /* Stay in place */
+  background: #ffffff;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(73, 93, 109);
+  position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 90%;
   margin: auto;
-  overflow: auto; /* Enable scroll if needed */
+  overflow: auto;
+}
+
+.info-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
