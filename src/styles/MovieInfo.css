@@ -39,5 +39,5 @@
 }
 
 .info-button {
-  margin-top: 100px;
+  align-self: flex-end;
 }

@@ -1,5 +1,5 @@
 .Footer {
-  max-height: 11vh;
+  height: 100px;
   background-color: rgb(48, 56, 70);
   padding-top: 1vh;
   display: flex;

@@ -31,7 +31,7 @@ const MovieInfo = (props) => {
   return (
     <Col className={display}>
       <div className="info-content">
-        <div className="image-div col-sm-12 col-md-7 col-lg-6 col-xxl-4">
+        <div className="image-div col-sm-12 col-md-7 col-lg-6 col-xxl-8">
           <Figure className="info-img">
             <Figure.Image
               className="img-fluid m-0"
@@ -40,7 +40,7 @@ const MovieInfo = (props) => {
             />
           </Figure>
         </div>
-        <div className="image-text col-sm-12 col-md-4 gx-md-2">
+        <div className="image-text col-sm-12 col-md-4 gx-md-1 gx-md-0 col-xxl-4">
           <div className="info-text">
             <h1 className="text-white">
               {title}
@@ -69,6 +69,7 @@ const MovieInfo = (props) => {
               </strong>
               &#160;
               {director}
+              .
               <br />
               <br />
               <strong className="section-title">
@@ -76,6 +77,7 @@ const MovieInfo = (props) => {
               </strong>
               &#160;
               {producer}
+              .
               <br />
               <br />
               <strong className="section-title">
@@ -83,6 +85,7 @@ const MovieInfo = (props) => {
               </strong>
               &#160;
               {releaseDate}
+              .
               <br />
               <br />
               <strong className="section-title">
@@ -99,8 +102,9 @@ const MovieInfo = (props) => {
               &#160;
               {rtScore}
               %
+              .
             </p>
-            <Button className="mt-1" onClick={handleClick} variant="primary" size="lg" active>
+            <Button className="info-button" onClick={handleClick} variant="primary" size="lg" active>
               Go Back
             </Button>
           </div>

@@ -3,19 +3,19 @@
 /* MIN WIDTH */
 @media (min-width: 1px) {
   .info-text {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .section-title {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (min-width: 576px) {
   .info-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .section-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -38,10 +38,10 @@
   }
 
   .info-text {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .section-title {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
 }
@@ -80,24 +80,20 @@
   }
 
   .info-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .section-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
    
 }
 
 @media (min-width: 1400px) {
   .info-text {
+    font-size: 1rem;
+  }
+  .section-title {
     font-size: 1.1rem;
-  }
-  .section-title {
-    font-size: 1.2rem;
-  }
-
-  .section-title {
-    font-size: 1.2rem;
   }
 }
 
