@@ -75,8 +75,16 @@ const MovieSelected = () => {
               </Button>
             </div>
             <MovieInfo
-              displayStatus="d-none"
-              title=""
+              displayStatus={movieSelectedInfo.displayStatus}
+              title={movieSelectedInfo.title}
+              originalTitle={movieSelectedInfo.originalTitle}
+              originalTitleRomanised={movieSelectedInfo.originalTitleRomanised}
+              description={movieSelectedInfo.description}
+              director={movieSelectedInfo.director}
+              producer={movieSelectedInfo.producer}
+              releaseDate={movieSelectedInfo.releaseDate}
+              runningTime={movieSelectedInfo.runningTime}
+              rtScore={movieSelectedInfo.rtScore}
             />
           </Col>
         )) }
