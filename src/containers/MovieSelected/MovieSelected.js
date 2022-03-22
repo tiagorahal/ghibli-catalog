@@ -42,8 +42,6 @@ const MovieSelected = () => {
     return movieSelectedInfo;
   };
 
-  // PASSAR POR PROPS E ONCLICK NO ELEMENTO FORA DO MAP!!!!!!!!!!!!!!!!!!!!111
-
   return (
     <Row className="m-auto mt-5">
       {movieList // first movieList is to check if is true before loading
