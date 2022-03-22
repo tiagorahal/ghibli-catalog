@@ -54,7 +54,7 @@ const MovieSelected = () => {
                 <Figure.Image
                   fluid
                   alt="Movie Poster"
-                  src={movie.image}
+                  src={movie.movie_banner}
                 />
                 <Figure.Caption className="text-light">
                   Original title:

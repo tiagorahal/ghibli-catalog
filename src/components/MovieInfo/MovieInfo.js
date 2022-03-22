@@ -32,7 +32,7 @@ const MovieInfo = (props) => {
       <h1>
         {title}
       </h1>
-      <img src={image} alt={title} />
+      <img className="img-fluid" src={image} alt={title} />
       <p>
         {originalTitle}
       </p>
