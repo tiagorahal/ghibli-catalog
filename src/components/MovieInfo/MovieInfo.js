@@ -47,26 +47,12 @@ const MovieInfo = (props) => {
             </h1>
             <p>
               {originalTitle}
-            </p>
-            <p>
               {originalTitleRomanised}
-            </p>
-            <p>
               {description}
-            </p>
-            <p>
               {director}
-            </p>
-            <p>
               {producer}
-            </p>
-            <p>
               {releaseDate}
-            </p>
-            <p>
               {runningTime}
-            </p>
-            <p>
               {rtScore}
             </p>
             <Button onClick={handleClick} variant="primary" size="lg">
