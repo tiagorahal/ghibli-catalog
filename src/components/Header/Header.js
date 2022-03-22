@@ -4,7 +4,6 @@ import {
   Col,
   Figure,
 } from 'react-bootstrap';
-import { FaBars } from 'react-icons/fa';
 import HeaderLogo from '../../assets/images/header-logo.png';
 
 const Header = () => {
@@ -17,8 +16,8 @@ const Header = () => {
         <a href={headerLink} target="_blank" rel="noreferrer" className="tablet-header-link">
           {headerText}
         </a>
-        <a href={headerLink} target="_blank" rel="noreferrer" className="mobile-header-link">
-          <FaBars />
+        <a href={headerLink} target="_blank" rel="noreferrer" className="mobile-header-link px-4">
+          Wiki
         </a>
         <Figure>
           <Figure.Image
