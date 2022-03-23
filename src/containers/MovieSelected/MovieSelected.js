@@ -13,37 +13,26 @@ const MovieSelected = () => {
   const [movieList] = useApi('https://ghibliapi.herokuapp.com/films/');
   const [movieSelectedInfo, setInfo] = useState({
     displayStatus: 'd-none',
-    title: '',
-    image: '',
-    originalTitle: '',
-    originalTitleRomanised: '',
-    description: '',
-    director: '',
-    producer: '',
-    releaseDate: '',
-    runningTime: '',
-    rtScore: '',
   });
 
   const handleClick = (movie) => {
-    setInfo({
-      displayStatus: 'd-block',
-      title: movie.title,
-      image: movie.image,
-      originalTitle: movie.original_title,
-      originalTitleRomanised: movie.original_title_romanised,
-      description: movie.description,
-      director: movie.director,
-      producer: movie.producer,
-      releaseDate: movie.release_date,
-      runningTime: movie.running_time,
-      rtScore: movie.rt_score,
-    });
-    return movieSelectedInfo;
+    setTimeout(() => {
+      setInfo({
+        displayStatus: 'd-block',
+        title: movie.title,
+        image: movie.image,
+        originalTitle: movie.original_title,
+        originalTitleRomanised: movie.original_title_romanised,
+        description: movie.description,
+        director: movie.director,
+        producer: movie.producer,
+        releaseDate: movie.release_date,
+        runningTime: movie.running_time,
+        rtScore: movie.rt_score,
+      });
+    }, 1000);
   };
-
-  // PASSAR POR PROPS E ONCLICK NO ELEMENTO FORA DO MAP!!!!!!!!!!!!!!!!!!!!111
-
+  // amarrar de algum jeito o handleclick com a key
   return (
     <Row className="m-auto mt-5">
       {movieList // first movieList is to check if is true before loading
@@ -64,13 +53,7 @@ const MovieSelected = () => {
               </Figure>
               <h4>{movie.title}</h4>
               <p className="moviedescription">{`${movie.description.slice(0, 106)}...`}</p>
-              <Button
-                variant="outline-light"
-                size="md"
-                className="justify-content-end"
-                active
-                onClick={() => handleClick(movie)}
-              >
+              <Button className="" variant="primary" size="lg" onClick={() => handleClick(movie)}>
                 Click to see more...
               </Button>
             </div>

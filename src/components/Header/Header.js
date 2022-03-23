@@ -7,14 +7,13 @@ import {
 import HeaderLogo from '../../assets/images/header-logo.png';
 
 const Header = () => {
-  const headerText = 'Click to know more about Ghibli Studio.';
   const headerLink = 'https://ghibli.fandom.com/wiki/Ghibli_Wiki';
 
   return (
     <Row>
       <Col sx={12} className="Header">
         <a href={headerLink} target="_blank" rel="noreferrer" className="tablet-header-link">
-          {headerText}
+          Check out the Ghibli Wiki
         </a>
         <a href={headerLink} target="_blank" rel="noreferrer" className="mobile-header-link px-4">
           Wiki

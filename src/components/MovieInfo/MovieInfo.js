@@ -34,7 +34,6 @@ const MovieInfo = (props) => {
         <div className="image-div col-sm-12 col-md-7 col-lg-6 col-xxl-8">
           <Figure className="info-img">
             <Figure.Image
-              bsPrefix
               alt={title}
               src={image}
             />
