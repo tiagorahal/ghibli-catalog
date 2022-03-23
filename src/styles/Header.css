@@ -12,7 +12,7 @@
 .tablet-header-link,
 .tablet-header-link:hover,
 .tablet-header-link:visited {
-  font-family: ghibliBold;
+  font-family: ghibliRegular;
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
@@ -22,6 +22,7 @@
 .mobile-header-link,
 .mobile-header-link:hover,
 .mobile-header-link:visited {
+  font-family: ghibliRegular;
   text-decoration: none;
   color: white;
   font-size: 1.5rem;

@@ -11,23 +11,11 @@ import useApi from '../../services/useApi';
 
 const MovieSelected = () => {
   const [movieList] = useApi('https://ghibliapi.herokuapp.com/films/');
-  const [theButton, setTheButton] = useState({ status: '' });
   const [movieSelectedInfo, setInfo] = useState({
     displayStatus: 'd-none',
-    title: '',
-    image: '',
-    originalTitle: '',
-    originalTitleRomanised: '',
-    description: '',
-    director: '',
-    producer: '',
-    releaseDate: '',
-    runningTime: '',
-    rtScore: '',
   });
 
   const handleClick = (movie) => {
-    setTheButton({ status: 'fa fa-refresh fa-spin' });
     setTimeout(() => {
       setInfo({
         displayStatus: 'd-block',
@@ -43,11 +31,7 @@ const MovieSelected = () => {
         rtScore: movie.rt_score,
       });
     }, 1000);
-    setTimeout(() => {
-      setTheButton({ status: '' });
-    }, 1100);
   };
-
   // amarrar de algum jeito o handleclick com a key
   return (
     <Row className="m-auto mt-5">
@@ -69,10 +53,8 @@ const MovieSelected = () => {
               </Figure>
               <h4>{movie.title}</h4>
               <p className="moviedescription">{`${movie.description.slice(0, 106)}...`}</p>
-              <Button className="button-clicked" variant="primary" size="lg" onClick={() => handleClick(movie)}>
+              <Button className="" variant="primary" size="lg" onClick={() => handleClick(movie)}>
                 Click to see more...
-                &nbsp;
-                <i className={theButton.status} />
               </Button>
             </div>
             <MovieInfo
