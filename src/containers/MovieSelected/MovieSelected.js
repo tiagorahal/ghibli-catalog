@@ -3,17 +3,15 @@ import {
   Row,
   Col,
   Figure,
+  Button,
 } from 'react-bootstrap';
-import ReactiveButton from 'reactive-button';
 
 import MovieInfo from '../../components/MovieInfo/MovieInfo';
 import useApi from '../../services/useApi';
 
 const MovieSelected = () => {
   const [movieList] = useApi('https://ghibliapi.herokuapp.com/films/');
-  const [state, setState] = useState('idle');
   const [movieSelectedInfo, setInfo] = useState({
-    butttonDisable: false,
     displayStatus: 'd-none',
     title: '',
     image: '',
@@ -28,11 +26,8 @@ const MovieSelected = () => {
   });
 
   const handleClick = (movie) => {
-    setState('loading');
     setTimeout(() => {
-      setState('success');
       setInfo({
-        butttonDisable: true,
         displayStatus: 'd-block',
         title: movie.title,
         image: movie.image,
@@ -45,8 +40,7 @@ const MovieSelected = () => {
         runningTime: movie.running_time,
         rtScore: movie.rt_score,
       });
-    }, 1500);
-    return movieSelectedInfo;
+    }, 1000);
   };
 
   // amarrar de algum jeito o handleclick com a key
@@ -70,20 +64,11 @@ const MovieSelected = () => {
               </Figure>
               <h4>{movie.title}</h4>
               <p className="moviedescription">{`${movie.description.slice(0, 106)}...`}</p>
-              <ReactiveButton
-                buttonState={state}
-                loadingText="Loading"
-                successText="Ready"
-                messageDuration={1500}
-                animation={false}
-                idleText="Click to know more..."
-                disabled={movieSelectedInfo.butttonDisable}
-                variant="outline-light"
-                size="md"
-                className="justify-content-end"
-                active
-                onClick={() => handleClick(movie)}
-              />
+              <a href="#MovieSelected">
+                <Button variant="primary" size="lg" onClick={() => handleClick(movie)}>
+                  Click to see more...
+                </Button>
+              </a>
             </div>
             <MovieInfo
               displayStatus={movieSelectedInfo.displayStatus}
